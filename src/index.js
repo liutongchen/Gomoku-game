@@ -65,8 +65,6 @@ class Game extends React.Component {
     }
   }
 
-  static player1 = prompt("Player One (black piece): ", "Black");
-  static player2 = prompt("Player Two (white piece): ", "White");
   //event handlers
   squareClickHandler(x, y) {
     const backHistory = this.state.history.back.slice();
@@ -189,11 +187,7 @@ class Game extends React.Component {
     if (winner) {
       status = "Winner: " + winner;
     } else {
-      if (Game.player1 !== null && Game.player2 !== null) {
-        status = "Next player: " + (this.state.isBlackNext ? Game.player1 : Game.player2);
-      } else {
         status = "Next player: " + (this.state.isBlackNext ? Square.blackPieceName : Square.whitePieceName);
-      }
     }
 
     return (
