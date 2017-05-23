@@ -1,2 +1,3 @@
 # Gomoku-game
-a Japanese board game named Gomoku written with ReacJS
+This is a Japanese board game named Gomoku written with ReacJS.
+Please click [here](https://codepen.io/Liutongchen/full/BRvVjL/) to play the game!
