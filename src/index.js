@@ -70,7 +70,7 @@ class Game extends React.Component {
     const backHistory = this.state.history.back.slice();
     const squares = this.state.currentSquares.slice();
 
-    if (squares[y][x] || this.state.winner) {
+    if (squares[y][x] !== null || this.state.winner) {
       return;
     }
 
@@ -155,7 +155,7 @@ class Game extends React.Component {
     ];
     for (let i = 0; i < direction.length; i++) {
       const lengthPos = Game.getMaxLength(x, y, direction[i][0], direction[i][1], squares);
-      const lengthNeg = Game.getMaxLength(x, y, -direction[i][0], direction[i][1], squares);
+      const lengthNeg = Game.getMaxLength(x, y, -direction[i][0], -direction[i][1], squares);
       if ((lengthNeg + lengthPos + 1) >= 5) {
         return true;
       }
